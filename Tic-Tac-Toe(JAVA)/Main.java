@@ -14,10 +14,17 @@ public class Main{
  Scanner sc=new Scanner(System.in);
  while(!gameOver){
     printBoard(board);
+
+     if(!haveWon(board, player)&& isBoardFull(board)){
+        System.out.println("Game Draw");
+        break;
+    }
     System.out.print("Player "+player+" enter: ");
     int row=sc.nextInt();
     int col=sc.nextInt();
     System.out.println();
+   
+
     if(board[row][col] == ' '){
        board[row][col] = player;
        gameOver=haveWon(board,player);
@@ -72,6 +79,17 @@ public static void printBoard(char[][] board){
  }
 }
 
+public static boolean isBoardFull(char board[][]){
+    for(int i=0;i<board.length;i++){
+        for(int j=0;j<board[0].length;j++){
+            if(board[j][i]==' '){
+                return false;
+            }
+    }
+}
+return true;
 
 
+
+}
 }
