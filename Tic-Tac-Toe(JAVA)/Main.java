@@ -22,7 +22,7 @@ public class Main{
        board[row][col] = player;
        gameOver=haveWon(board,player);
        if(gameOver){
-        System.out.println("player "+player+" has won");
+        System.out.println("player "+player+" has won the game");
 
     }else{
         player=(player=='X')?'O':'X';
@@ -30,7 +30,7 @@ public class Main{
     }
 }
 else{
-    System.out.println("Invalid move. Try Again!");
+    System.out.println("Invalid move. Please try Again!");
 }
  }
  printBoard(board);
