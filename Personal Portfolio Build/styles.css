@@ -180,6 +180,11 @@
       margin: 15px auto;
     }
   }
+  #navbar {
+    position:fixed;
+    top:0;
+  }
+  
   
   nav {
     font-weight: 400;
@@ -534,5 +539,7 @@
     justify-content: center;
     font-size: 1.2rem;
   }
+  
+  
   
   
